@@ -9,15 +9,22 @@ Module ConvertAndValidate
         Dim convertThisString As String
         Dim thisInteger As Integer
 
-        convertThisString = CInt(Console.ReadLine())
+        Console.WriteLine("Type in a number please.")
+        convertThisString = (Console.ReadLine())
         ConvertAndValidate(convertThisString, thisInteger)
-
-
+        Console.WriteLine(thisInteger)
+        Console.Read()
 
     End Sub
 
-    Private Function ConvertAndValidate(ByVal convertThisString As Integer, ByRef toThisInteger As Integer)
-
+    Private Function ConvertAndValidate(ByVal convertThisString As String, ByRef toThisInteger As Integer)
+        Try
+            toThisInteger = CInt(convertThisString)
+            toThisInteger = 60
+        Catch
+            toThisInteger = 90
+        End Try
+        Return toThisInteger
     End Function
 
 End Module
