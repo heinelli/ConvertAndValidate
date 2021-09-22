@@ -12,6 +12,8 @@ Module ConvertAndValidate
         Console.WriteLine("Type in a number please.")
         convertThisString = (Console.ReadLine())
         ConvertAndValidate(convertThisString, thisInteger)
+        Console.WriteLine(ConvertAndValidate(convertThisString, thisInteger))
+        Console.WriteLine(thisInteger)
         Console.Read()
 
     End Sub
@@ -21,7 +23,7 @@ Module ConvertAndValidate
 
         Try
             toThisInteger = CInt(convertThisString)
-            returnMessage = "fish"
+            returnMessage = "worked"
         Catch
             returnMessage = "nope"
         End Try
