@@ -12,19 +12,20 @@ Module ConvertAndValidate
         Console.WriteLine("Type in a number please.")
         convertThisString = (Console.ReadLine())
         ConvertAndValidate(convertThisString, thisInteger)
-        Console.WriteLine(thisInteger)
         Console.Read()
 
     End Sub
 
-    Private Function ConvertAndValidate(ByVal convertThisString As String, ByRef toThisInteger As Integer)
+    Private Function ConvertAndValidate(ByVal convertThisString As String, ByRef toThisInteger As Integer) As String
+        Dim returnMessage As String
+
         Try
             toThisInteger = CInt(convertThisString)
-            toThisInteger = 60
+            returnMessage = "fish"
         Catch
-            toThisInteger = 90
+            returnMessage = "nope"
         End Try
-        Return toThisInteger
+        Return returnMessage
     End Function
 
 End Module
