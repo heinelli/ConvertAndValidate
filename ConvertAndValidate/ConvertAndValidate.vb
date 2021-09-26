@@ -23,9 +23,13 @@ Module ConvertAndValidate
 
         Try
             toThisInteger = CInt(convertThisString)
-            returnMessage = "worked"
+            returnMessage = ""
         Catch
-            returnMessage = "nope"
+            If convertThisString = "" Then
+                returnMessage = "Is empty"
+            Else
+                returnMessage = "Must contain a number"
+            End If
         End Try
         Return returnMessage
     End Function
