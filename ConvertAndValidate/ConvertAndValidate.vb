@@ -4,6 +4,9 @@
 'ConvertAndValidate
 'https://github.com/heinelli/ConvertAndValidate.git
 
+Option Strict On
+Option Explicit On
+
 Module ConvertAndValidate
     Sub Main()
         Dim convertThisString As String
@@ -13,9 +16,7 @@ Module ConvertAndValidate
         convertThisString = (Console.ReadLine())
         ConvertAndValidate(convertThisString, thisInteger)
         Console.WriteLine(ConvertAndValidate(convertThisString, thisInteger))
-        Console.WriteLine(thisInteger)
         Console.Read()
-
     End Sub
 
     Private Function ConvertAndValidate(ByVal convertThisString As String, ByRef toThisInteger As Integer) As String
@@ -33,5 +34,4 @@ Module ConvertAndValidate
         End Try
         Return returnMessage
     End Function
-
 End Module
